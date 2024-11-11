@@ -1,12 +1,13 @@
-#!/usr/bin/env node
-
 import readlineSync from 'readline-sync';
 import { question as ask } from './src/utils.js';
 import askName from './src/cli.js';
 
-const app = (gameName, gameTask, rounds = 3) => {
+const app = (gameName, gameTask = '', rounds = 3) => {
   console.log('Welcome to the Brain Games!');
   const userName = askName();
+  if (gameName === 'justHello') {
+    return;
+  }
   console.log(gameTask);
 
   let score = 0;

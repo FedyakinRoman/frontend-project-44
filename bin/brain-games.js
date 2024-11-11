@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-import askName from '../src/cli.js';
 
-console.log('Welcome to the Brain Games!');
-askName();
+import app from '../index.js';
+
+const gameName = 'justHello';
+
+app(gameName);

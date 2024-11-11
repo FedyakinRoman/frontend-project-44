@@ -1,27 +1,8 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
-import askName from '../../src/cli.js';
-import { question as ask } from '../../src/utils.js';
+import app from '../../index.js';
 
-console.log('Welcome to the Brain Games!');
-const userName = askName();
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
-const rounds = 3;
-let score = 0;
+const gameTask = 'Answer "yes" if given number is even. Otherwise answer "no".';
+const gameName = 'even';
 
-for (let i = 0; i < rounds; i += 1) {
-  const { riddle, correctAnswer } = ask('even');
-  console.log(`Question: ${riddle}`);
-  const answer = readlineSync.question('Your answer: ');
-  if (answer !== correctAnswer) {
-    console.log(`Let's try again, ${userName}!`);
-    break;
-  }
-  console.log('Correct!');
-  score += 1;
-}
-
-if (score === rounds) {
-  console.log(`Congratulations, ${userName}!`);
-}
+app(gameName, gameTask);
