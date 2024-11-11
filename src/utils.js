@@ -9,6 +9,12 @@ const operations = {
 const getRandomOperation = () => _.sample(Object.keys(operations));
 const getRandomNumber = (max = 100) => Math.floor(Math.random() * max);
 const isEven = (number) => (number % 2 === 0);
+const gcd = (num1, num2) => {
+  if (num2 === 0) {
+    return num1;
+  }
+  return gcd(num2, num1 % num2);
+};
 
 const question = (game) => {
   let riddle;
@@ -30,7 +36,14 @@ const question = (game) => {
       correctAnswer = `${operations[operation](first, second)}`;
       break;
     }
+    case 'gcd': {
+      const first = getRandomNumber(25);
+      const second = getRandomNumber(25);
 
+      riddle = `${first} ${second}`;
+      correctAnswer = `${gcd(first, second)}`;
+      break;
+    }
     default: break;
   }
   return { riddle, correctAnswer };

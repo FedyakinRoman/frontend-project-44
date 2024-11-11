@@ -8,3 +8,6 @@ Brain Game Even/Odd:
 
 Brain Game Calculations:
 [![asciicast](https://asciinema.org/a/Sjrig2kc9tGekODSeTWq4QqTV.svg)](https://asciinema.org/a/Sjrig2kc9tGekODSeTWq4QqTV)
+
+Brain Game Greatest Common Divisor:
+[![asciicast](https://asciinema.org/a/O84WGPnoOjUWeCHNTKvz7P5fQ.svg)](https://asciinema.org/a/O84WGPnoOjUWeCHNTKvz7P5fQ)
