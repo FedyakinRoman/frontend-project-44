@@ -6,12 +6,12 @@ import { question as ask } from '../src/utils.js';
 
 console.log('Welcome to the Brain Games!');
 const userName = askName();
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+console.log('What is the result of the expression?');
 const rounds = 3;
 let score = 0;
 
 for (let i = 0; i < rounds; i += 1) {
-  const { riddle, correctAnswer } = ask('even');
+  const { riddle, correctAnswer } = ask('calc');
   console.log(`Question: ${riddle}`);
   const answer = readlineSync.question('Your answer: ');
   if (answer !== correctAnswer) {
