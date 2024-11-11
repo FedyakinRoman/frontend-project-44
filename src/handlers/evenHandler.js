@@ -1,9 +1,7 @@
-import {getRandomNumber, isEven} from "../utils.js";
+import { getRandomNumber, isEven } from '../utils.js';
 
-const evenHandler = () => {
+export default () => {
   const riddle = getRandomNumber();
   const correctAnswer = isEven(riddle) ? 'yes' : 'no';
   return { riddle, correctAnswer };
 };
-
-export default evenHandler;
