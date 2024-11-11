@@ -11,3 +11,6 @@ Brain Game Calculations:
 
 Brain Game Greatest Common Divisor:
 [![asciicast](https://asciinema.org/a/O84WGPnoOjUWeCHNTKvz7P5fQ.svg)](https://asciinema.org/a/O84WGPnoOjUWeCHNTKvz7P5fQ)
+
+Brain Game Progression:
+[![asciicast](https://asciinema.org/a/XmuksHy7GpygOvpsJJwnu7iG8.svg)](https://asciinema.org/a/XmuksHy7GpygOvpsJJwnu7iG8)
