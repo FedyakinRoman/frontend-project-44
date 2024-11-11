@@ -53,23 +53,23 @@ const question = (game) => {
     //   correctAnswer = isEven(riddle) ? 'yes' : 'no';
     //   break;
     // }
-    case 'calc': {
-      const first = getRandomNumber(10);
-      const second = getRandomNumber(10);
-      const operation = getRandomOperation();
-
-      riddle = `${first} ${operation} ${second}`;
-      correctAnswer = `${operations[operation](first, second)}`;
-      break;
-    }
-    case 'gcd': {
-      const first = getRandomNumber(25);
-      const second = getRandomNumber(25);
-
-      riddle = `${first} ${second}`;
-      correctAnswer = `${gcd(first, second)}`;
-      break;
-    }
+    // case 'calc': {
+    //   const first = getRandomNumber(10);
+    //   const second = getRandomNumber(10);
+    //   const operation = getRandomOperation();
+    //
+    //   riddle = `${first} ${operation} ${second}`;
+    //   correctAnswer = `${operations[operation](first, second)}`;
+    //   break;
+    // }
+    // case 'gcd': {
+    //   const first = getRandomNumber(25);
+    //   const second = getRandomNumber(25);
+    //
+    //   riddle = `${first} ${second}`;
+    //   correctAnswer = `${gcd(first, second)}`;
+    //   break;
+    // }
     case 'progression': {
       const { hiddenElement, maskedProgression } = hideElement(generateProgression());
       riddle = maskedProgression;
@@ -88,5 +88,5 @@ const question = (game) => {
 };
 
 export {
-  isEven, getRandomNumber, question, isPrime, gcd,
+  isEven, getRandomNumber, question, isPrime, gcd, getRandomOperation, operations,
 };
