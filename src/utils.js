@@ -48,11 +48,11 @@ const question = (game) => {
   let correctAnswer;
 
   switch (game) {
-    case 'even': {
-      riddle = getRandomNumber();
-      correctAnswer = isEven(riddle) ? 'yes' : 'no';
-      break;
-    }
+    // case 'even': {
+    //   riddle = getRandomNumber();
+    //   correctAnswer = isEven(riddle) ? 'yes' : 'no';
+    //   break;
+    // }
     case 'calc': {
       const first = getRandomNumber(10);
       const second = getRandomNumber(10);
@@ -76,15 +76,17 @@ const question = (game) => {
       correctAnswer = hiddenElement;
       break;
     }
-    case 'prime': {
-      riddle = getRandomNumber();
-      correctAnswer = isPrime(riddle) ? 'yes' : 'no';
-      break;
-    }
+    // case 'prime': {
+    //   riddle = getRandomNumber();
+    //   correctAnswer = isPrime(riddle) ? 'yes' : 'no';
+    //   break;
+    // }
     default: break;
   }
 
   return { riddle, correctAnswer };
 };
 
-export { isEven, getRandomNumber, question };
+export {
+  isEven, getRandomNumber, question, isPrime, gcd,
+};
