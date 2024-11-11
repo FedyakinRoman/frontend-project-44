@@ -31,7 +31,17 @@ const hideElement = (progression) => {
   const maskedProgression = progressionCopy.toString().replaceAll(',', ' ');
   return { hiddenElement, maskedProgression };
 };
-// console.log(hideElement(generateProgression()))
+const isPrime = (num) => {
+  let divisor = 1;
+  const endOfCheck = Math.sqrt(num);
+  while (divisor < endOfCheck) {
+    divisor += 1;
+    if (num % divisor === 0) {
+      return false;
+    }
+  }
+  return true;
+};
 
 const question = (game) => {
   let riddle;
@@ -64,6 +74,11 @@ const question = (game) => {
       const { hiddenElement, maskedProgression } = hideElement(generateProgression());
       riddle = maskedProgression;
       correctAnswer = hiddenElement;
+      break;
+    }
+    case 'prime': {
+      riddle = getRandomNumber();
+      correctAnswer = isPrime(riddle) ? 'yes' : 'no';
       break;
     }
     default: break;
