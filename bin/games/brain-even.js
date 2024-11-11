@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import askName from '../src/cli.js';
-import { question as ask } from '../src/utils.js';
+import askName from '../../src/cli.js';
+import { question as ask } from '../../src/utils.js';
 
 console.log('Welcome to the Brain Games!');
 const userName = askName();
-console.log('Find the greatest common divisor of given numbers.');
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
 const rounds = 3;
 let score = 0;
 
 for (let i = 0; i < rounds; i += 1) {
-  const { riddle, correctAnswer } = ask('gcd');
+  const { riddle, correctAnswer } = ask('even');
   console.log(`Question: ${riddle}`);
   const answer = readlineSync.question('Your answer: ');
   if (answer !== correctAnswer) {
