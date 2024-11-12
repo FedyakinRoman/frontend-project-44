@@ -3,6 +3,6 @@
 import app from '../../index.js';
 import evenHandler from '../../src/handlers/evenHandler.js';
 
-const gameTask = 'Answer "yes" if given number is even. Otherwise answer "no".';
+const gameTask = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 app(evenHandler, gameTask);
