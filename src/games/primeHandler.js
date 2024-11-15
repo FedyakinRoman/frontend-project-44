@@ -2,6 +2,9 @@ import app from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const isPrime = (num) => {
+  if (num <= 1) {
+    return false;
+  }
   let divisor = 1;
   const endOfCheck = Math.sqrt(num);
   while (divisor < endOfCheck) {
