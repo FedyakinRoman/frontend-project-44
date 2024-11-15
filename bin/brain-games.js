@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import app from '../index.js';
+import app from '../src/index.js';
 
 app();
